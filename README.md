@@ -61,6 +61,12 @@ With a browser of Postman, you can now:
     - If you set a django superuser, administer from `<local_host>:<django_port>/admin/`
     - If the swagger doc with `<local_host>:<fast_api_port>/docs/`
 
+## Pytest:
+
+- Download all the pytest packages in the requirements.txt
+- Go on the root folder
+- To run all the test, just write `pytest`
+- To run a file, run `pytest path_to_file/test_file.py`
 
 
 
