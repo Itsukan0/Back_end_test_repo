@@ -3,7 +3,7 @@ Learning Repo for my backend interview project
 
 ## Setup
 This repo will run on Python, so setup a virtual environnement and copy the requirements !
-- `python.exe -m venv .ven`
+- `python.exe -m venv .venv`
 - `python.exe -m pip install --upgrade pip`
 - `pip install -r requirements.txt`
 
