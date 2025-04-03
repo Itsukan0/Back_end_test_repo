@@ -56,7 +56,7 @@ On Windows 11:
     - run another terminal with the venv enabled
     - Start the FastAPI service with : `uvicorn fastapi_app:app --reload --port <your_port>` (for exemple : 8001)
 
-With a browser of Postman, you can now:
+- With a browser of Postman, you can now:
     - Do basic CRUD operations with the `/api/` endpoint
     - If you set a django superuser, administer from `<local_host>:<django_port>/admin/`
     - If the swagger doc with `<local_host>:<fast_api_port>/docs/`
