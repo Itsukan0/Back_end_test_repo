@@ -1,7 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from datetime import date
+from typing import Optional
 
-# Modèle Pydantic pour la création d'un livre
+# # Modèle Pydantic pour la création d'un livre
 class BookCreate(BaseModel):
     title: str
     author: str
@@ -11,7 +12,7 @@ class BookCreate(BaseModel):
     language: str
     isborrowed: bool = False
 
-# Modèle Pydantic pour la réponse de l'API (inclut l'ID du livre)
+# # Modèle Pydantic pour la réponse de l'API (inclut l'ID du livre)
 class BookOut(BaseModel):
     id: int
     title: str
@@ -21,6 +22,13 @@ class BookOut(BaseModel):
     pages: int
     language: str
     isborrowed: bool
+    model_config = ConfigDict(from_attributes=True)
 
-    class Config:
-        orm_mode = True  # Permet à Pydantic de gérer directement les objets Django ORM
+class BookUpdate(BaseModel):
+    title: Optional[str] = None
+    author: Optional[str] = None
+    published_date: Optional[date] = None
+    isbn_number: Optional[str] = None
+    pages: Optional[int] = None
+    language: Optional[str] = None
+    isborrowed: Optional[bool] = None
